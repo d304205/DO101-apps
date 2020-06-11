@@ -15,6 +15,7 @@ router.post('/get_weather', async function (req,res) {
   let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=${UNITS}&appid=${OWM_API_KEY}`;
 
   console.log(process.env.OWM_API_KEY);
+  console.log(url);
 
   try {
     let data = await fetch(url);
